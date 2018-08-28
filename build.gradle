@@ -1,0 +1,48 @@
+buildscript {
+  apply from: 'https://rawgit.com/kkojaeh/pico-erp-gradle/master/buildscript.gradle'
+}
+
+ext {
+  linkHomepage = 'https://kkojaeh.github.io/pico-erp-server/#/'
+  linkCi = 'https://travis-ci.org/kkojaeh/pico-erp-shared'
+  linkIssue = 'https://github.com/kkojaeh/pico-erp-shared/issues'
+  linkScmUrl = 'https://github.com/kkojaeh/pico-erp-shared'
+  linkScmConnection = 'scm:git:git://github.com/kkojaeh/pico-erp-shared.git'
+  linkScmDevConnection = 'scm:git:ssh://git@github.com/kkojaeh/pico-erp-shared.git'
+}
+
+apply plugin: 'java'
+apply plugin: 'net.researchgate.release'
+
+
+apply from: 'https://rawgit.com/kkojaeh/pico-erp-gradle/master/parent.gradle'
+
+release {
+  failOnCommitNeeded = false
+  failOnPublishNeeded = true
+  failOnSnapshotDependencies = true
+  failOnUnversionedFiles = true
+  failOnUpdateNeeded = true
+  revertOnFail = true
+  preCommitText = ''
+  preTagCommitMessage = '[Gradle Release Plugin] - pre tag commit: '
+  tagCommitMessage = '[Gradle Release Plugin] - creating tag: '
+  newVersionCommitMessage = '[Gradle Release Plugin] - new version commit: '
+  tagTemplate = '${version}'
+  versionPropertyFile = 'gradle.properties'
+  versionProperties = []
+  buildTasks = ['build']
+  release {
+    scmAdapters = [net.researchgate.release.GitAdapter]
+  }
+
+  git {
+    requireBranch = 'master'
+    pushToRemote = 'origin'
+    pushToBranchPrefix = ''
+    commitVersionFileOnly = false
+  }
+
+}
+
+

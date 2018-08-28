@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: "net.ltgt.apt"
+apply plugin: "io.github.divinespear.jpa-schema-generate"
+
+apply from: 'https://rawgit.com/kkojaeh/pico-erp-gradle/master/impl.gradle'
+
+afterEvaluate {
+  dependencies {
+
+    compile('com.github.kkojaeh.pico-erp-shared:shared-impl:1.0.0')
+
+    compile project(':audit-api')
+
+    compile('org.javers:javers-core:3.7.9')
+
+    compile('org.javers:javers-spring-jpa:3.7.9')
+
+    compile('org.javers:javers-persistence-sql:3.7.9')
+
+    runtime('com.h2database:h2')
+
+    compile('com.fasterxml.jackson.core:jackson-databind')
+
+  }
+}

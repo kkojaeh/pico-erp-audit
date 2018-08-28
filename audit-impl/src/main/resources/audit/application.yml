@@ -1,0 +1,80 @@
+banner:
+  location: classpath:audit/banner.txt
+
+spring:
+  application:
+    name: pico-audit
+  session:
+    store-type: NONE
+  messages:
+    cache-seconds: 60
+    basename: audit-messages
+    encoding: UTF-8
+  datasource:
+    url: ${AUDIT_DATASOURCE_URL:${DATASOURCE_URL:jdbc:p6spy:h2:mem:audit}}
+    driver-class-name: ${AUDIT_DATASOURCE_DRIVER_CLASS_NAME:${DATASOURCE_DRIVER_CLASS_NAME:com.p6spy.engine.spy.P6SpyDriver}}
+    username: ${AUDIT_DATASOURCE_USERNAME:${DATASOURCE_USERNAME:as}}
+    password: ${AUDIT_DATASOURCE_PASSWORD:${DATASOURCE_PASSWORD:null}}
+    hikari:
+      maximum-pool-size: 4
+  jpa:
+    database: H2
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    properties:
+      hibernate:
+        generate_statistics: false
+        cache:
+          use_second_level_cache: false
+          use_query_cache: false
+  activemq:
+    broker-url: ${ACTIVE_MQ_BROKER_URL:vm://embedded?brokerConfig=xbean:embedded-activemq.xml}
+    user: ${ACTIVE_MQ_USER:}
+    password: ${ACTIVE_MQ_PASSWORD:}
+    in-memory: ${ACTIVE_MQ_IN_MEMORY:true}
+    non-blocking-redelivery: false
+    packages:
+      trust-all: false
+      trusted: pico.erp
+    pool:
+      block-if-full: true
+      block-if-full-timeout: -1
+      create-connection-on-startup: true
+      enabled: false
+      expiry-timeout: 0
+      idle-timeout: 30000
+      max-connections: 1
+      maximum-active-session-per-connection: 100
+      reconnect-on-exception: true
+      time-between-expiration-check: -1
+      use-anonymous-producers: false
+
+  jms:
+    listener:
+      acknowledge-mode: auto
+      auto-startup: true
+      concurrency: 1
+      max-concurrency: 1
+    pub-sub-domain: false
+    template:
+      default-destination:
+      delivery-mode: non_persistent
+      priority: 100
+      qos-enabled: false
+      receive-timeout: 1000
+      time-to-live: 36000
+
+logging:
+  level:
+    org:
+      springframework: INFO
+
+flyway:
+  enabled: false
+
+javers:
+  dialect: H2
+
+audit:
+  enabled: ${AUDIT_ENABLED:true}
