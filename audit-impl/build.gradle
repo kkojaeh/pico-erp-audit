@@ -22,5 +22,7 @@ afterEvaluate {
 
     compile('com.fasterxml.jackson.core:jackson-databind')
 
+    testRuntimeOnly project(':audit-test-cfg')
+
   }
 }

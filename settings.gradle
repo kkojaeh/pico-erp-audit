@@ -1,4 +1,5 @@
 rootProject.name = 'pico-erp-audit'
 include 'audit-api'
 include 'audit-impl'
+include 'audit-test-cfg'
 
