@@ -4,10 +4,8 @@ apply plugin: "net.ltgt.apt"
 
 apply from: 'https://rawgit.com/kkojaeh/pico-erp-gradle/master/api.gradle'
 
-afterEvaluate {
-  dependencies {
+dependencies {
 
-    compile('com.github.kkojaeh.pico-erp-shared:shared-api:1.0.0')
+  compile("com.github.kkojaeh.pico-erp-shared:shared-api:${sharedVersion}")
 
-  }
 }

@@ -4,10 +4,8 @@ apply plugin: "net.ltgt.apt"
 
 apply from: 'https://rawgit.com/kkojaeh/pico-erp-gradle/master/test-cfg.gradle'
 
-afterEvaluate {
-  dependencies {
+dependencies {
 
-    compile project(':audit-impl')
+  compile project(':audit-impl')
 
-  }
 }
