@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: "net.ltgt.apt"
+apply plugin: 'net.ltgt.apt-idea'
 
 apply from: 'https://rawgit.com/kkojaeh/pico-erp-gradle/master/test-cfg.gradle'
 
