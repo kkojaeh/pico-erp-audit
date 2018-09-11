@@ -1,4 +1,4 @@
-package pico.erp.audit.core;
+package pico.erp.audit;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.time.ZoneId;
@@ -31,7 +31,6 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 import pico.erp.audit.AuditExceptions.NotRegisteredAuditTypeException;
-import pico.erp.audit.AuditService;
 import pico.erp.audit.data.AuditId;
 import pico.erp.audit.data.ChangeData;
 import pico.erp.audit.data.CollectionChangeData;

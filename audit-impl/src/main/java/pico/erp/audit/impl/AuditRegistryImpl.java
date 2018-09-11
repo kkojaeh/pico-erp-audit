@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 import pico.erp.audit.AuditExceptions.AlreadyAuditAliasExistsException;
 import pico.erp.audit.AuditExceptions.NotRegisteredAuditTypeException;
-import pico.erp.audit.core.AuditRegistry;
+import pico.erp.audit.AuditRegistry;
 
 @Component
 @Validated

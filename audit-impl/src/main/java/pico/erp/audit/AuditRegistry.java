@@ -1,4 +1,4 @@
-package pico.erp.audit.core;
+package pico.erp.audit;
 
 import javax.validation.constraints.NotNull;
 

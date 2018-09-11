@@ -1,4 +1,4 @@
-package pico.erp.audit.core;
+package pico.erp.audit;
 
 import org.javers.core.Javers;
 

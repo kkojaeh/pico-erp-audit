@@ -11,7 +11,6 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.TaskScheduler;
-import pico.erp.audit.core.AuditConfigurer;
 import pico.erp.audit.data.AuditConfiguration;
 import pico.erp.shared.ApplicationInitializer;
 import pico.erp.shared.ApplicationStarter;

@@ -29,8 +29,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import pico.erp.audit.annotation.Audit;
-import pico.erp.audit.core.AuditConfigurer;
-import pico.erp.audit.core.AuditRegistry;
+import pico.erp.audit.AuditConfigurer;
+import pico.erp.audit.AuditRegistry;
 import pico.erp.audit.data.AuditConfiguration;
 import pico.erp.audit.impl.AuditConfigurerImpl.JaversConfiguration;
 
