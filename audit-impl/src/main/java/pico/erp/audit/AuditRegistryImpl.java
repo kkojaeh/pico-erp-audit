@@ -1,4 +1,4 @@
-package pico.erp.audit.impl;
+package pico.erp.audit;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 import pico.erp.audit.AuditExceptions.AlreadyAuditAliasExistsException;
 import pico.erp.audit.AuditExceptions.NotRegisteredAuditTypeException;
-import pico.erp.audit.AuditRegistry;
 
 @Component
 @Validated

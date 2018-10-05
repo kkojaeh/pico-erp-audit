@@ -11,7 +11,6 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.TaskScheduler;
-import pico.erp.audit.data.AuditConfiguration;
 import pico.erp.shared.ApplicationInitializer;
 import pico.erp.shared.ApplicationStarter;
 import pico.erp.shared.Public;
@@ -21,7 +20,7 @@ import pico.erp.shared.impl.ApplicationImpl;
 @SuppressWarnings("SpringJavaAutowiringInspection")
 @Slf4j
 @SpringBootConfigs
-public class Application implements ApplicationStarter {
+public class AuditApplication implements ApplicationStarter {
 
   public static final String CONFIG_NAME = "audit/application";
 
@@ -37,7 +36,7 @@ public class Application implements ApplicationStarter {
   private ApplicationContext applicationContext;
 
   public static SpringApplication application() {
-    return new SpringApplicationBuilder(Application.class)
+    return new SpringApplicationBuilder(AuditApplication.class)
       .properties(DEFAULT_PROPERTIES)
       .web(false)
       .build();

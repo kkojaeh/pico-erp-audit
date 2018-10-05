@@ -8,8 +8,6 @@ import org.springframework.context.annotation.Lazy
 import org.springframework.test.annotation.Rollback
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.transaction.annotation.Transactional
-import pico.erp.audit.data.AuditConfiguration
-import pico.erp.audit.data.AuditId
 import pico.erp.shared.ApplicationInitializer
 import pico.erp.shared.IntegrationConfiguration
 import pico.erp.shared.Public

@@ -1,4 +1,4 @@
-package pico.erp.audit.impl;
+package pico.erp.audit;
 
 import java.util.Collection;
 import java.util.Map;
@@ -28,11 +28,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
+import pico.erp.audit.AuditConfigurerImpl.JaversConfiguration;
 import pico.erp.audit.annotation.Audit;
-import pico.erp.audit.AuditConfigurer;
-import pico.erp.audit.AuditRegistry;
-import pico.erp.audit.data.AuditConfiguration;
-import pico.erp.audit.impl.AuditConfigurerImpl.JaversConfiguration;
 
 @Component
 @Import(JaversConfiguration.class)

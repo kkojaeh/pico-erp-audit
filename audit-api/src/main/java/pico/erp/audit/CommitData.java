@@ -1,4 +1,4 @@
-package pico.erp.audit.data;
+package pico.erp.audit;
 
 import java.util.Date;
 import java.util.Set;

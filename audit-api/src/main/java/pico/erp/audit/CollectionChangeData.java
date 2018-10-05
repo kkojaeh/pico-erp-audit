@@ -1,4 +1,4 @@
-package pico.erp.audit.data;
+package pico.erp.audit;
 
 import java.util.Set;
 import lombok.AccessLevel;

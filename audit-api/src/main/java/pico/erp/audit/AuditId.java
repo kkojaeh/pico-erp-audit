@@ -1,4 +1,4 @@
-package pico.erp.audit.data;
+package pico.erp.audit;
 
 import java.io.Serializable;
 import javax.persistence.Embeddable;
