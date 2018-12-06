@@ -8,9 +8,9 @@ apply from: 'https://rawgit.com/kkojaeh/pico-erp-gradle/master/impl.gradle'
 
 dependencies {
 
-  compile("com.github.kkojaeh.pico-erp-shared:shared-impl:${sharedVersion}")
-
   compile project(':audit-api')
+
+  compile("com.github.kkojaeh.pico-erp-shared:shared-impl:${sharedVersion}")
 
   compile('org.javers:javers-core:3.7.9')
 
