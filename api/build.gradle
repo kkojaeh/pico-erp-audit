@@ -7,6 +7,6 @@ apply from: 'https://rawgit.com/kkojaeh/pico-erp-gradle/master/api.gradle'
 
 dependencies {
 
-  compile("com.github.kkojaeh.pico-erp-shared:shared-api:${sharedVersion}")
+  compile("com.github.kkojaeh.pico-erp-shared:api:${sharedVersion}")
 
 }
