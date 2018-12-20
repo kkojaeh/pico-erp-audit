@@ -7,6 +7,6 @@ apply from: 'https://rawgit.com/kkojaeh/pico-erp-gradle/master/test.gradle'
 
 dependencies {
 
-  compile project(':audit-impl')
+  compile project(':impl')
 
 }
